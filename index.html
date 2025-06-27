@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mohammad Sharif | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://unpkg.com/scrollreveal"></script>
+
+</head>
+<body>
+  <header>
+    
+    <nav class="navbar">
+
+  <div class="logo"> <img src="images/logo.jpg"/>MSCodes.io</div>
+  <div class="menu-toggle" id="menuToggle">&#9776;</div>
+  <ul class="nav-links" id="navLinks">
+    <li class="list"><a class="menu_list" href="#home">Home</a></li>
+    <li class="list"><a class="menu_list" href="#about">About</a></li>
+    <li class="list"><a class="menu_list" href="#projects">Projects</a></li>
+    <li class="list"><a class="menu_list" href="#contact">Contact</a></li>
+  </ul>
+  <button id="themeToggle" class="btn">🌙</button>
+</nav>
+
+  </header>
+
+<section id="home" class="hero">
+  <img src="images/me.jpg" alt="Profile Picture" class="profile-img" />
+  <div class="intro-text">
+    <h1>Hi, I'm <span style="color: #bb86fc;">Mohammad Sharif</span></h1>
+    <h2><span class="typing"></span></h2>
+    <a href="#contact" class="btn">Let's Work Together</a>
+  </div>
+</section>
+
+
+  </section>
+
+  <section id="about">
+  <h2>About Me</h2>
+  <p>Hi, I'm <strong>Mohammad Sharif</strong> — a Computer Engineering student from Lorma Colleges with a passion for building modern, intelligent web systems that solve real-world problems.</p>
+  <p>I’ve developed projects like a <strong>Tutorial School Website</strong> that helps educators manage content and students easily, an <strong>Inventory System</strong> that streamlines item tracking and reporting, and a <strong>Smart Navigation Website</strong> that provides users with smarter, location-aware directions.</p>
+  <p>What drives me is the belief that technology should be intuitive, helpful, and inspiring. I love working with both front-end and back-end technologies, and I enjoy turning complex ideas into interactive, user-friendly experiences. My focus is always on clean code, thoughtful design, and practical functionality.</p>
+  <p>If you're looking for someone who can deliver strong results, adapt quickly, and work with creativity and professionalism — I'm your guy. Let’s build something meaningful together.</p>
+  <a href="#contact" class="btn">Hire Me</a>
+</section>
+
+
+ <section id="projects">
+  <h2>Projects</h2>
+  <div class="project-list">
+    <div class="project-card">
+      <img src="images/bunny.gif" alt="Face Recognition Project" class="project-img" />
+      <h3>Face Recognition System</h3>
+      <p>Uses Arduino + Camera + Python to detect and recognize faces in real-time.</p>
+      <button onclick="alert('More details coming soon')">View More</button>
+    </div>
+
+    <div class="project-card">
+      <img src="images/cute.gif" alt="AI Study Tool Research" class="project-img" />
+      <h3>AI Study Tool Research</h3>
+      <p>Analyzed the impact of ChatGPT and Mathway on student learning and performance.</p>
+      <button onclick="alert('More details coming soon')">View More</button>
+    </div>
+
+    <div class="project-card">
+      <img src="images/AT.gif" alt="Tutorial Website" class="project-img" />
+      <h3>Tutorial School Website</h3>
+      <p>A responsive platform for tutorial centers to manage schedules, students, and announcements using HTML, CSS, JS, and PHP.</p>
+      <button onclick="alert('More details coming soon')">View More</button>
+    </div>
+
+    <div class="project-card">
+      <img src="images/jake.gif" alt="Inventory System" class="project-img" />
+      <h3>Inventory Management System</h3>
+      <p>Full-featured inventory system with stock tracking, sales reports, and database integration using PHP and MySQL.</p>
+      <button onclick="alert('More details coming soon')">View More</button>
+    </div>
+
+    <div class="project-card">
+      <img src="images/cry.gif" alt="Smart Navigation" class="project-img" />
+      <h3>Smart Navigation Website</h3>
+      <p>An intelligent web-based navigation tool offering optimized routes and geolocation features.</p>
+      <button onclick="alert('More details coming soon')">View More</button>
+    </div>
+  </div>
+</section>
+
+
+  
+  <section id="contact">
+    <h2>Contact Me</h2>
+  <form id="contact-form">
+    <input type="hidden" name="_subject" value="New message from MSCodes.io">
+<input type="hidden" name="_template" value="box">
+<input type="hidden" name="_from" value="MSCodes.io <no-reply@formsubmit.co>">
+
+  <input type="hidden" name="_captcha" value="false">
+  <input type="text" name="_honey" style="display:none">
+  <input type="text" name="name" placeholder="Your Name" required>
+  <input type="email" name="email" placeholder="Your Email" required>
+  <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+  <button type="submit" class="btn">Send</button>
+</form>
+<p id="form-status"></p>
+
+
+  </section>
+
+  <footer>
+    <p>© 2025 Mohammad Sharif. All rights reserved.</p>
+    <button id="backToTop">↑ Back to Top</button>
+  </footer>
+
+  <script src="script.js">
+    
+  </script>
+
+  <script>
+  document.getElementById("contact-form").addEventListener("submit", function (e) {
+    e.preventDefault(); // Prevent page reload
+
+    const form = e.target;
+    const formData = new FormData(form);
+
+    fetch("https://formsubmit.co/ajax/sharifraagas22@gmail.com", {
+      method: "POST",
+      body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+      alert('Your message has been sent to the Developer!');
+      document.getElementById("form-status").innerText = "" ;
+    })
+    .catch(error => {
+      document.getElementById("form-status").innerText = "Oops! Something went wrong.";
+    });
+  });
+</script>
+ 
+</body>
+</html>
